@@ -1,0 +1,15 @@
+# Keep .env files out of git
+backend/.env
+
+# Go specific ignores
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# But don't ignore go.mod and go.sum
+!go.mod
+!go.sum

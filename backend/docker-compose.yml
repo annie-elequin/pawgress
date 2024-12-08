@@ -1,5 +1,5 @@
 services:
-  pawgress-backend:
+  pawgress:
     build: .
     ports:
       - "8484:8484"
