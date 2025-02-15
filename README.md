@@ -1,7 +1,3 @@
-Certainly! Here's a quick **README** for the project you've set up so far:
-
----
-
 # **Pawgress** 🐾
 
 **Pawgress** is a dog training app designed to help owners track their dogs' training progress using spaced repetition. The app allows users to add and assign behaviors to multiple dogs, log training sessions, and track the progress of individual training reps. Users can manage their own training sessions, assign behaviors to dogs, and receive reminders for spaced repetition practice.
