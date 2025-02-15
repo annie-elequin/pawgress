@@ -1,0 +1,14 @@
+{
+  "name": "pawgress",
+  "private": true,
+  "workspaces": {
+    "packages": ["backend", "frontend"]
+  },
+  "scripts": {
+    "bdev": "yarn workspace backend dev",
+    "fdev": "yarn workspace frontend dev",
+    "dev": "yarn bdev & yarn fdev",
+    "build": "yarn workspace backend build & yarn workspace frontend build",
+    "start": "yarn workspace backend start & yarn workspace frontend start"
+  }
+}
