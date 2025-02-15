@@ -108,7 +108,3 @@ You can start creating **dogs**, **behaviors**, and **track training sessions**!
 ## **Contributing**
 
 Feel free to fork and create pull requests for any improvements or bug fixes!
-
----
-
-Let me know if you'd like to modify or add anything to the README!
