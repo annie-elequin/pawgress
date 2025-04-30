@@ -4,36 +4,33 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "3000:3000"
+      - "${FRONTEND_PORT}:3000"
     volumes:
       - ./frontend:/app
       - /app/node_modules
-    environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/pawgress?schema=public
-      - NEXTAUTH_URL=http://localhost:3000
+    env_file:
+      - stack.env
     depends_on:
       - db
 
   backend:
     build: ./backend
     ports:
-      - "4000:4000"
+      - "${BACKEND_PORT}:4000"
     volumes:
       - ./backend:/app
       - /app/node_modules
-    environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/pawgress?schema=public
+    env_file:
+      - stack.env
     depends_on:
       - db
 
   db:
     image: postgres:15
     ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=pawgress
+      - "${DB_PORT}:5432"
+    env_file:
+      - stack.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
